@@ -3,11 +3,11 @@ var router = express.Router();
 var Task=require('../models/Task');
 
 /**
- * @api {get} /:id 根据ID请求信息
- * @apiName getId
- * @apiGroup test
- * @apiParam {Number} id unique
- * @apiSuccess {Object}
+ * @api {get} /:id 根据ID请求信息.
+ * @apiName getId.
+ * @apiGroup test.
+ * @apiParam {Number} id unique.
+ * @apiSuccess {Object} firstname Firstname of the User.
  * @apiSuccessExample {json} Success-Response:
  * HTTP/1.1 200 OK
  * {
