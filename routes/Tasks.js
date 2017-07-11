@@ -3,7 +3,7 @@ var router = express.Router();
 var Task=require('../models/Task');
 
 /**
- * @api {get} /:id 根据ID请求信息.
+ * @apiDoc {get} /:id 根据ID请求信息.
  * @apiName getId.
  * @apiGroup test.
  * @apiParam {Number} id unique.
