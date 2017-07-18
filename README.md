@@ -7,10 +7,17 @@ npm i
 ```sh
 node ./bin/www
 ```
-浏览器打开：
-(确保数据库已连接，有数据)
+浏览器打开(确保数据库已连接，有数据)：
 ```sh
 localhost:3000/test
+```
+文档生成：
+```sh
+apidoc -i ./routes -o ./public
+```
+访问文档：
+```sh
+http://localhost:3000/apiDoc
 ```
 MYSQL语句：
 ```sh
