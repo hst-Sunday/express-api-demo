@@ -4,9 +4,13 @@ express+mysql 搭的一个api服务
 ```sh
 npm i
 ```
-浏览器打开：
 ```sh
-localhost:3000
+node ./bin/www
+```
+浏览器打开：
+(确保数据库已连接，有数据)
+```sh
+localhost:3000/test
 ```
 MYSQL语句：
 ```sh
