@@ -22,10 +22,17 @@ router.get('/:id?',function(req,res,next){
 
             if(err)
             {
-                res.json(err);
+                res.json({
+                  "status": "failure",
+                  "message": err
+                });
             }
             else{
-                res.json(rows);
+                res.json(
+                  { "status": "success",
+                    "data": rows
+                }
+                );
             }
         });
     }
@@ -35,11 +42,16 @@ router.get('/:id?',function(req,res,next){
 
             if(err)
             {
-                res.json(err);
+                res.json({
+                  "status": "failure",
+                  "message": err
+                });
             }
             else
             {
-                res.json(rows);
+                res.json({ "status": "success",
+                  "data": rows
+                });
             }
 
         });
@@ -50,10 +62,15 @@ router.post('/',function(req,res,next){
     Task.addTask(req.body,function(err,count){
         if(err)
         {
-            res.json(err);
+            res.json({
+              "status": "failure",
+              "message": err
+            });
         }
         else{
-            res.json(req.body);//or return count for 1 &amp;amp;amp; 0
+            res.json({ "status": "success",
+              "data": req.body
+            });//or return count for 1 &amp;amp;amp; 0
         }
     });
 });
@@ -63,11 +80,16 @@ router.delete('/:id',function(req,res,next){
 
         if(err)
         {
-            res.json(err);
+            res.json({
+              "status": "failure",
+              "message": err
+            });
         }
         else
         {
-            res.json(count);
+            res.json({ "status": "success",
+              "data": count
+            });
         }
 
     });
@@ -78,11 +100,16 @@ router.put('/:id',function(req,res,next){
 
         if(err)
         {
-            res.json(err);
+            res.json({
+              "status": "failure",
+              "message": err
+            });
         }
         else
         {
-            res.json(rows);
+            res.json({ "status": "success",
+              "data": rows
+            });
         }
     });
 });
